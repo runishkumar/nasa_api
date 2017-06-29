@@ -1,0 +1,9 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    prefix: /
+
+nasa_api:
+    resource: "@NasaApiBundle/Controller/"
+    type:     annotation
+    prefix:   /neo

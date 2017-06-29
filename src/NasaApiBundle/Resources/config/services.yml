@@ -1,0 +1,7 @@
+services:
+    nasa.api.client:
+        class: NasaApiBundle\Client\NasaApiClient
+        arguments: ["%nasa_api_base_url%", "%nasa_api_key%", "@serializer"]
+    nasa.api.service:
+       class: NasaApiBundle\Service\NasaApiService
+       arguments: ["@nasa.api.client", "@doctrine.orm.entity_manager"]
